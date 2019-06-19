@@ -32,7 +32,7 @@ wakeup_handler(void)
  * getting notified before deep sleep. All we need is to be notified when we
  * wake up so we can turn power domains back on
  */
-LPM_MODULE(launchpad_module, NULL, NULL, wakeup_handler, LPM_DOMAIN_NONE);
+LPM_MODULE(rfn_tag_module, NULL, NULL, wakeup_handler, LPM_DOMAIN_NONE);
 /*---------------------------------------------------------------------------*/
 static void
 configure_unused_pins(void)
@@ -63,7 +63,7 @@ board_init()
   ti_lib_prcm_load_set();
   while(!ti_lib_prcm_load_get());
 
-  lpm_register_module(&launchpad_module);
+  lpm_register_module(&rfn_tag_module);
 
   /* For unsupported peripherals, select a default pin configuration */
   configure_unused_pins();

@@ -140,8 +140,13 @@ platform_init_stage_one()
 
   ti_lib_int_master_disable();
 
+#if BOARD_RFN
+  /* Set the LF RCOSC as the LF system clock source */
+  oscillators_select_lf_rcosc();
+#else
   /* Set the LF XOSC as the LF system clock source */
   oscillators_select_lf_xosc();
+#endif
 
   lpm_init();
 

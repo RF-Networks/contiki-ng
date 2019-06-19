@@ -168,7 +168,7 @@
  * also possible to use any other externally-controlled DIO.
  * @{
  */
-#define CCXXWARE_CONF_BL_PIN_NUMBER   BOARD_IOID_KEY_SELECT
+#define CCXXWARE_CONF_BL_PIN_NUMBER   IOID_UNUSED//BOARD_IOID_KEY_SELECT
 #define CCXXWARE_CONF_BL_LEVEL        0
 /** @} */
 /*---------------------------------------------------------------------------*/
@@ -197,7 +197,7 @@
     BOARD_IOID_CS, BOARD_IOID_TDO, BOARD_IOID_TDI, \
     BOARD_IOID_DIO15, BOARD_IOID_DIO21, BOARD_IOID_DIO22, BOARD_IOID_DIO23, \
     BOARD_IOID_DIO24, BOARD_IOID_DIO25, BOARD_IOID_DIO26, BOARD_IOID_DIO27, \
-    BOARD_IOID_DIO28, BOARD_IOID_DIO29, \
+    BOARD_IOID_DIO28, BOARD_IOID_DIO29, BOARD_IOID_DIO30, \
     IOID_UNUSED \
   }
 /** @} */
